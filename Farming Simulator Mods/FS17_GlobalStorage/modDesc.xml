@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="32">
+    <author>Balu</author>
+	
+    <version>0.9</version>
+	
+	<multiplayer supported="true" />
+	
+	<title>
+        <en>Global Storage</en>
+    </title>
+	
+	<description>
+        <en>
+            This can be placed once on map and is used to access the global storage
+        </en>
+        <de>
+            Bitte nur einmal platzieren. Wird genutzt um den globalen Speicher zu errreichen
+        </de>
+    </description>
+	
+    <iconFilename>icon_store_hayLoft.png</iconFilename>
+	
+    <storeItems>
+        <storeItem rootNode="placeable" xmlFilename="globalStorage.xml"/>
+    </storeItems>
+</modDesc>

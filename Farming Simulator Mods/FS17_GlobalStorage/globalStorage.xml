@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable>
+    <storeData>
+        <name>            
+            <en>Global Storage</en>
+        </name>
+        <specs>
+            <capacity>90000000</capacity>
+            <fillTypes>straw wheat barley rape grass_windrow dryGrass_windrow forage silage potato sugarBeet woodChips chaff</fillTypes>
+        </specs>
+        <image>store_hayLoft.dds</image>
+        <price>10</price>
+        <dailyUpkeep>0</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>LIZARD</brand>
+        <species>placeable</species>
+        <category>placeables</category>
+        <vertexBufferMemoryUsage>342780</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>45162</indexBufferMemoryUsage>
+        <textureMemoryUsage>12277336</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+    <placeableType>hayLoft</placeableType>
+    <filename>globalStorage.i3d</filename>
+    <placement testSizeX="17" testSizeZ="10" sizeX="4" sizeZ="3" useRandomYRotation="false" useManualYRotation="true"/>
+    <hayLoft tipTrigger="0>3" siloTrigger="0>4"/>
+    <dayNightObjects>
+        <dayNightObject index="0>2" visibleDay="false" visibleNight="true"/>
+    </dayNightObjects>
+    <tipOcclusionUpdateArea sizeX="19" sizeZ="12"/>
+    <clearAreas>
+        <clearArea startIndex="0>6|0" widthIndex="0>6|1" heightIndex="0>6|2"/>
+    </clearAreas>
+</placeable>
