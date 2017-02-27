@@ -1,7 +1,9 @@
+# -*- encoding: utf-8 -*- 
 import socket, random, time, os.path, sys
 from threading import Thread, Lock
 import xml.etree.ElementTree as ET
 import select
+import math
 
 TCP_IP = 'localhost'
 TCP_PORT = 5752
@@ -236,6 +238,11 @@ class ClientListener(Thread):
 
 											if serverAmount < 0:
 												serverAmount = 0
+											#NEW: Pricemodification
+											#For now: (will be changed later)
+											# If the amount is >= 1e+010 the price should be 10� (min)
+											currentPrice = int(math.floor(10010-((10000/1e+010)*serverAmount)))
+											commodity.find('price').text = "%s" % currentPrice											
 											commodity.find('amount').text = "%s" % serverAmount
 											self.saveTree(tree, root, current_user["hub"])
 									lock.release()
