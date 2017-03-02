@@ -1,4 +1,8 @@
 # GlobalMarket
+
+## WARNING - You are browsing the dev branch. This version probably won't work.
+## Check the releases for working versions
+
 Farming Simulator 2017: Global Market - Trade with real players!
 
 
