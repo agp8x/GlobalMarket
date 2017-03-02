@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 import os
 import sys
 import logging
@@ -11,6 +13,9 @@ import socket
 import queue
 import random
 import math
+
+if sys.version < 3:
+	raise Exception("This program is to be used on python3.x")
 
 log = logging.getLogger(__name__)
 
@@ -158,6 +163,9 @@ class GMServer(object):
 					#Add to clients and send full update
 					self.__clients[address] = time.time() + 30
 					response['data'] = self.__getFullUpdate()
+			elif data['request'] == 'update':
+				self.__clients[address] = time.time() + 30
+				response['data'] = self.__getFullUpdate()
 			elif data['request'] == 'buyorsell':
 				#Client wants to buy or sell
 				self.__clients[address] = time.time() + 30
@@ -186,6 +194,10 @@ class GMServer(object):
 		#Thread stopping
 		log.info("Stopped reciving")
 		return
+	
+	def __getFullUpdate(self):
+		#For now just send the storage, maybe some changes later
+		return self.__storage
 	
 	def __sender(self):
 		log.info("Sender started")
