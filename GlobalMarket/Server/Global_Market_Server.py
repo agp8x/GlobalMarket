@@ -14,7 +14,7 @@ import queue
 import random
 import math
 
-if sys.version < 3:
+if not sys.version.startswith("3"):
 	raise Exception("This program is to be used on python3.x")
 
 log = logging.getLogger(__name__)
