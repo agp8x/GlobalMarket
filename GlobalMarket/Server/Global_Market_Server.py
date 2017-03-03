@@ -17,7 +17,7 @@ import math
 if not sys.version.startswith("3"):
 	raise Exception("This program is to be used on python3.x")
 
-log = logging.getLogger(__name__)
+log = logging.getLogger(__title__)
 
 
 class GMServer(object):
@@ -107,9 +107,8 @@ class GMServer(object):
 			time.sleep(0.1)
 		while self.__started:
 			#Keep in mind: http://support.microsoft.com/kb/822061/ !
-			packet, address = self.__recvSock.recvfrom(8192)
 			try:
-				data = self.decodePacket(packet)
+				packet, address = self.__recvSock.recvfrom(8192)
 			except OSError as e:
 				#Error on reading
 				if not self.__started:
@@ -118,6 +117,7 @@ class GMServer(object):
 				else:
 					log.exception(e)
 					raise
+			data = self.decodePacket(packet)
 			response = {
 						"error": "",
 						"continue": True,
@@ -205,6 +205,7 @@ class GMServer(object):
 			if self.__sendQueue.qsize() <= 0:
 				#Nothing to send
 				time.sleep(1)
+				continue
 			d = self.__sendQueue.get()
 			packet = self.encodePacket(d[0])
 			self.__sendSock.sendto(packet, d[1])
