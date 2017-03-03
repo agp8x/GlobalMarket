@@ -1,3 +1,5 @@
+# DISCONTINUED - WILL BE DELETED SOON
+
 # GlobalMarket
 Farming Simulator 2017: Global Market - Trade with real players!
 
