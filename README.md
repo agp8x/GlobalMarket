@@ -7,6 +7,6 @@ The current version is still the one Balu created, a new UNSTABLE AND PROBABLY B
 
 Haruna
 
-## I'm currently rewriting the client and server
-## Feel free to post your ideas as "Issue" (https://github.com/chill0r/GlobalMarket/issues)
-## I'll implement them if possible (and ofc if reasonable)
+# I'm currently rewriting the client and server
+# Feel free to post your ideas as "Issue" (https://github.com/chill0r/GlobalMarket/issues)
+# I'll implement them if possible (and ofc if reasonable)
